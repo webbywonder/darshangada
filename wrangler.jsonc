@@ -1,0 +1,15 @@
+{
+  // Cloudflare Workers (Static Assets) config for darshangada.com
+  // Committed so the build stops auto-generating one each deploy.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "darshangada",
+  "compatibility_date": "2026-05-29",
+  // Serve the repo root as static assets. What NOT to upload is controlled
+  // by .assetsignore (keeps .git and other non-site files out of the bundle).
+  "assets": {
+    "directory": "."
+  },
+  // Temp domains are disabled in the dashboard; pin that here too.
+  "workers_dev": false,
+  "preview_urls": false
+}

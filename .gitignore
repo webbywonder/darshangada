@@ -22,3 +22,6 @@ logs/
 node_modules/
 dist/
 build/
+
+# Cloudflare Wrangler local state
+.wrangler/

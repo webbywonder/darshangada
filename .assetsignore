@@ -1,0 +1,12 @@
+# Patterns (gitignore-style) for files that must NOT be served as static
+# assets. Wrangler's asset uploader reads this from the assets directory.
+# Everything else in the repo root IS the site and gets served.
+
+.git
+.gitignore
+.assetsignore
+.wrangler
+.remember
+node_modules
+wrangler.jsonc
+README.md
