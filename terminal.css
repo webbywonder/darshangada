@@ -35,6 +35,22 @@
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
+/* Visually hidden, but present for crawlers + screen readers.
+   Used by the text résumé in index.html. NOT display:none — that would
+   hide it from assistive tech and search engines too. */
+.sr-resume {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 body {
   margin: 0;
   font-family: var(--mono);

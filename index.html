@@ -6,6 +6,9 @@
   <title>Darshan Gada — dr5hn OS</title>
   <meta name="description" content="Darshan Gada (dr5hn) — AI Engineer & open-source contributor. A playable résumé — open it and explore." />
 
+  <link rel="canonical" href="https://darshangada.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="favicon.svg" />
   <meta name="theme-color" content="#0b0e14" />
@@ -29,8 +32,209 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="terminal.css" />
+
+  <!-- Structured data: Person + WebSite. Drives Google's rich person treatment. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Darshan Gada",
+      "alternateName": "dr5hn",
+      "url": "https://darshangada.com/",
+      "image": "https://darshangada.com/og-image.png",
+      "jobTitle": "AI Engineer",
+      "description": "Full-stack engineer turned AI builder. Ships AI agents, system architecture, and developer tooling; maintains the open-source Country-State-City geo-data platform used by 50k+ developers.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressCountry": "IN"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "SOZO Design",
+        "url": "https://sozodesign.co.uk/"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "IGNOU University, Delhi" },
+        { "@type": "CollegeOrUniversity", "name": "University of Mumbai" }
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "AI Agents",
+        "Retrieval-Augmented Generation",
+        "Prompt Engineering",
+        "Multi-Agent Orchestration",
+        "Model Context Protocol",
+        "Full-Stack Development",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Python",
+        "Laravel",
+        "PostgreSQL",
+        "Redis",
+        "Vector Search",
+        "Open Source",
+        "Developer Tooling"
+      ],
+      "sameAs": [
+        "https://github.com/dr5hn",
+        "https://www.linkedin.com/in/dr5hn/",
+        "https://twitter.com/dr5hn"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "dr5hn OS",
+      "alternateName": "Darshan Gada — a playable résumé",
+      "url": "https://darshangada.com/",
+      "author": { "@type": "Person", "name": "Darshan Gada" }
+    }
+  ]
+  </script>
 </head>
 <body>
+  <!--
+    Text résumé for crawlers, AI assistants, and screen readers.
+    Visually hidden via .sr-resume in terminal.css — sighted visitors get the
+    terminal UI below instead. This MIRRORS the content in data.js (the
+    canonical source of truth); keep the two in sync when you edit data.js.
+  -->
+  <main class="sr-resume" aria-label="Darshan Gada — résumé (text version)">
+    <h1>Darshan Gada</h1>
+    <p>dr5hn — AI Engineer · Technical Innovation Leader · Open Source Contributor. Mumbai, India. 10+ years in production.</p>
+    <p>Full-stack engineer turned AI builder. I ship AI agents, design system architecture, and developer tooling — and I maintain open-source geo-data that 50k+ developers run in production.</p>
+
+    <section>
+      <h2>About</h2>
+      <p>I've spent 10+ years as a full-stack engineer, and these days I specialise in AI-powered product development, technical leadership, and developer tooling. I build AI agents, architect design systems, and lead teams that ship production-grade web apps. I also maintain the Country-State-City database — an open geo-data platform that's served billions of API requests. I like turning emerging AI capability into practical tools that make teams faster.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <article>
+        <h3>Head of AI &amp; Innovations — SOZO Design</h3>
+        <p>2025 — Present. Promoted from Senior Full Stack Developer. Award-winning UK digital agency (Cheltenham · London).</p>
+        <ul>
+          <li>Built an internal AI briefing agent — PDF analysis, web research (Tavily), SSE streaming, multi-format export. Next.js 16, React 19, OpenAI Assistants API, Supabase.</li>
+          <li>Built a RAG-based AI chatbot WordPress plugin with an n8n ingestion pipeline (Google Drive sync → PDF extraction → embeddings → Supabase vector storage).</li>
+          <li>Designed an AI tool standardisation framework: approval process, privacy guidelines, evaluation periods, team adoption.</li>
+          <li>Measured productivity gains: 15–40% on block development, 60–80% on documentation through AI adoption.</li>
+          <li>Integrated Figma MCP with Claude Code for automated design-to-code workflows.</li>
+          <li>Nominated for Employee of the Year.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Senior Full Stack Developer — SOZO Design</h3>
+        <p>2021 — 2024. Led technical architecture across 10+ client projects.</p>
+        <ul>
+          <li>Architected WoodScanner v2: a white-label marketplace with dynamic styling (CSS variables + ACF + shell scripts).</li>
+          <li>Adopted the Radicle WordPress framework across the team; standardised on Tailwind CSS.</li>
+          <li>Led migration from Bitbucket to GitHub; established GitHub Actions across 50+ plugins.</li>
+          <li>Built Teamwork CLI — an npm package replacing scattered scripts for project &amp; desk management.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Technical Lead — Vistaar Digital Communications</h3>
+        <p>2020 — 2021. Led a team of 5 (backend, frontend, mobile).</p>
+        <ul>
+          <li>Full ownership of architecture, code reviews, and deployments.</li>
+          <li>Saved 15% of team effort through GitHub Actions automation.</li>
+          <li>Cut debugging time by 50% via structured training.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Senior Software Engineer — Vistaar Digital Communications</h3>
+        <p>2018 — 2020. Built products across many stacks for US clients &amp; Indian pharma.</p>
+        <ul>
+          <li>Laravel, Node.js, React, Angular, Flutter, Django.</li>
+          <li>Key builds: WeOne (Neo4j graph earnings algorithm), Slingshot (test-prep PWA), Enablr (pharma eDetailing).</li>
+          <li>DevOps on Linode &amp; AWS; Dockerised dev environments.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Web Developer — Adevole</h3>
+        <p>2017 — 2018. Digital agency serving entrepreneurs.</p>
+        <ul>
+          <li>PHP, Laravel, WordPress, CodeIgniter builds.</li>
+          <li>API integrations: Google Adwords/Adsense, Leadsquared, Moodle, Cashfree, Facebook, IATA.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Freelance Web Developer — Self-employed</h3>
+        <p>2015 — 2017. Where it started.</p>
+        <ul>
+          <li>Static and WordPress sites for clients across India.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Open Source — Country · State · City</h2>
+      <p>An open-source geo-data ecosystem I maintain: a core dataset in 11+ formats, a freemium API, an export tool, a community manager, an encyclopedia, npm + Python packages, and automated changelogs. 250 countries, 5,308 states, 153,768 cities. 9k+ GitHub stars · 3k+ forks · 127+ contributors · 50k+ developers · 5B+ API requests served.</p>
+      <p>Links:
+        <a href="https://countrystatecity.in">countrystatecity.in</a>,
+        <a href="https://github.com/dr5hn/countries-states-cities-database">GitHub repository</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Selected Projects</h2>
+      <ul>
+        <li><a href="https://github.com/dr5hn/countries-states-cities-database">CSC Database</a> — the open dataset behind everything: 250 countries, 5,299 states, 153,768 cities in 11+ formats, auto-generated via GitHub Actions. (PHP, Python, MySQL.)</li>
+        <li><a href="https://countrystatecity.in">CSC API</a> — freemium REST API with dashboard, API keys, and usage management. (Express, Prisma, Redis, Bull, GitHub OAuth, Zod.)</li>
+        <li><a href="https://export.countrystatecity.in">CSC Export Tool</a> — build tailored datasets in the browser; 8 output formats, credit-based pricing. (React 19, Express, MongoDB, Redis, JSZip.)</li>
+        <li><a href="https://manager.countrystatecity.in">CSC Manager</a> — community web UI to browse the data and submit corrections through a review process. (React, Node.js.)</li>
+        <li><a href="https://cli.countrystatecity.in">CSC CLI</a> — search, explore, and generate code from geographic data in the terminal. (TypeScript, Node.js.)</li>
+        <li><a href="https://countrystatecity.org">CSC Encyclopedia</a> — a geographic encyclopedia with country profiles. (Next.js 16, React 19, Tailwind.)</li>
+        <li><a href="https://docs.countrystatecity.in">CSC Docs</a> — complete API documentation and integration guides. (Mintlify, MDX.)</li>
+        <li><a href="https://www.npmjs.com/package/@countrystatecity/countries">CSC npm packages</a> — zero-dependency, fully typed, offline-first, tree-shakeable. 427 timezones, 100% IANA coverage. (TypeScript, tsup, Vitest.)</li>
+        <li><a href="https://pypi.org/project/countrystatecity-countries/">CSC Python package</a> — fully typed Pydantic models, offline-first. (Pydantic, pytest, mypy, ruff.)</li>
+        <li><a href="https://ilovejson.com">iLoveJSON</a> — 28+ JSON tools in one place: 20 bidirectional converters plus beautify, diff, merge, query, and faker. (Next.js, Prisma, NextAuth, Radix UI, Tailwind.)</li>
+        <li><a href="https://github.com/dr5hn/ccm">ccm (Claude Code Manager)</a> — power-user toolkit for Claude Code: multi-account switching with OS keychain integration (macOS, Linux, WSL). (Shell, Bash.)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>AI / ML:</strong> AI Agents, RAG Architecture, Prompt Engineering, Multi-Agent Orchestration, Vector Search, Embeddings, AI Evaluation, MCP.</li>
+        <li><strong>AI Tooling:</strong> Claude Code, Cursor, n8n, OpenAI Assistants, Supabase Vectors, Tavily, GitHub Copilot, Pinecone.</li>
+        <li><strong>Backend:</strong> PHP 8, Laravel, Node.js, Python, Express, FastAPI, Django.</li>
+        <li><strong>Frontend:</strong> TypeScript, React, Next.js, Alpine.js, Three.js / R3F, Motion, Radix UI, Tailwind.</li>
+        <li><strong>Databases:</strong> MySQL, MongoDB, Redis, PostgreSQL, Neo4j, Elasticsearch, pgvector.</li>
+        <li><strong>DevOps:</strong> GitHub Actions, Docker, AWS, Vercel, Kinsta, Linode, Playwright, Cypress.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>Master of Computer Application — IGNOU University, Delhi (2014 — 2017).</li>
+        <li>B.Sc. Information Technology — Mumbai University (2008 — 2011).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Open to interesting AI + product work — full-time, and especially fractional engagements: Fractional AI / Engineering Lead, Fractional Architect, Fractional Code Reviewer, and AI adoption &amp; advisory.</p>
+      <ul>
+        <li><a href="https://github.com/dr5hn/">GitHub — github.com/dr5hn</a></li>
+        <li><a href="https://www.linkedin.com/in/dr5hn/">LinkedIn — linkedin.com/in/dr5hn</a></li>
+        <li><a href="https://twitter.com/dr5hn/">X / Twitter — @dr5hn</a></li>
+      </ul>
+    </section>
+  </main>
+
   <div class="screen">
     <div class="window">
       <!-- title bar + HUD -->

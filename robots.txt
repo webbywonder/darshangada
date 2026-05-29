@@ -1,0 +1,5 @@
+# darshangada.com — allow everyone, including AI crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://darshangada.com/sitemap.xml

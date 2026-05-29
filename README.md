@@ -47,15 +47,19 @@ Type these into the prompt (or tap a suggestion chip). Tab completes, ↑/↓ wa
 
 ```
 darshangada/
-├── index.html     # Markup, meta/OG tags, and script load order
-├── terminal.css   # All styling — terminal chrome + CRT overlays
-├── data.js        # Content layer: résumé data + metrics (single source of truth)
-├── engine.js      # Terminal engine: command registry, boot sequence, discovery meter
-├── ask.js         # Scripted assistant — curated knowledge base + fuzzy matching
-├── sfx.js         # Web Audio synthesized sound effects (no audio files)
-├── snake.js       # Self-contained ASCII Snake mini-game
-├── favicon.svg    # Favicon / apple-touch-icon
-└── og-image.png   # Open Graph / Twitter share image (1200×630)
+├── index.html      # Markup, meta/OG/JSON-LD, hidden text résumé, script order
+├── terminal.css    # All styling — terminal chrome + CRT overlays
+├── data.js         # Content layer: résumé data + metrics (single source of truth)
+├── engine.js       # Terminal engine: command registry, boot sequence, discovery meter
+├── ask.js          # Scripted assistant — curated knowledge base + fuzzy matching
+├── sfx.js          # Web Audio synthesized sound effects (no audio files)
+├── snake.js        # Self-contained ASCII Snake mini-game
+├── favicon.svg     # Favicon / apple-touch-icon
+├── og-image.png    # Open Graph / Twitter share image (1200×630)
+├── robots.txt      # Crawler directives + sitemap pointer
+├── sitemap.xml     # Single-page sitemap
+├── wrangler.jsonc  # Cloudflare Worker (Static Assets) deploy config
+└── .assetsignore   # Files kept out of the deployed bundle (e.g. .git)
 ```
 
 Scripts load in dependency order in `index.html`: `data.js` → `ask.js` → `sfx.js` → `snake.js` → `engine.js`.
@@ -87,6 +91,28 @@ All copy and numbers live in [`data.js`](data.js):
 - The `csc` dashboard overrides several numbers with live API data at runtime, so those never need manual updates.
 
 No build or restart is needed — just refresh.
+
+> **SEO sync note:** the résumé content lives twice — in `data.js` (what the
+> terminal renders) and in the hidden `<main class="sr-resume">` block in
+> `index.html` (what crawlers, AI assistants, and screen readers read, since
+> the terminal injects everything via JS). When you edit `data.js`, mirror the
+> change in that block so the two stay consistent.
+
+---
+
+## SEO & crawlability
+
+The site is a JS-rendered terminal, so the real content is exposed to crawlers
+through static markup:
+
+- **Hidden text résumé** — a visually-hidden but DOM-present `<main>` in
+  `index.html` (semantic `h1`/`h2`/sections) gives crawlers and screen readers
+  the full résumé without changing the terminal experience.
+- **JSON-LD** — `Person` + `WebSite` structured data in the `<head>` for rich
+  search results.
+- **`robots.txt`** allows all crawlers (including AI bots) and points to the
+  sitemap; **`sitemap.xml`** lists the single page.
+- Canonical URL and `robots` meta are set in `index.html`.
 
 ---
 
