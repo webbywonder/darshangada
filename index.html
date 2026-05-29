@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Darshan Gada — dr5hn OS</title>
+  <meta name="description" content="Darshan Gada (dr5hn) — AI Engineer & open-source contributor. A playable résumé — open it and explore." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <meta name="theme-color" content="#0b0e14" />
+
+  <!-- Social share (Open Graph + Twitter). Absolute URLs assume the live domain. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="dr5hn OS" />
+  <meta property="og:url" content="https://darshangada.com/" />
+  <meta property="og:title" content="Darshan Gada — a playable résumé" />
+  <meta property="og:description" content="AI Engineer · Open Source · Mumbai. Open it and explore — type a command, or just tap one." />
+  <meta property="og:image" content="https://darshangada.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Darshan Gada — a playable résumé" />
+  <meta name="twitter:description" content="AI Engineer · Open Source · Mumbai. Open it and explore — type a command, or just tap one." />
+  <meta name="twitter:image" content="https://darshangada.com/og-image.png" />
+  <meta name="twitter:site" content="@dr5hn" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="terminal.css" />
+</head>
+<body>
+  <div class="screen">
+    <div class="window">
+      <!-- title bar + HUD -->
+      <div class="titlebar">
+        <div class="dots">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        </div>
+        <div class="title-label"><b>visitor@dr5hn</b>: ~ — zsh</div>
+        <div class="hud">
+          <span class="meter">
+            <span class="txt">explored</span>
+            <span class="bars" id="bars"></span>
+            <span id="meterTxt" class="faint"></span>
+          </span>
+          <button class="snd-toggle" id="sndToggle" title="Sound" aria-label="toggle sound" aria-pressed="false">♪ off</button>
+          <span class="resume-link" id="resumeHatch" title="Just show me the facts">resume ↵</span>
+        </div>
+      </div>
+
+      <!-- scrollable output -->
+      <div class="viewport" id="viewport">
+        <div class="out" id="out" role="log" aria-live="polite" aria-atomic="false"></div>
+      </div>
+
+      <!-- command bar: tappable chips + input -->
+      <div class="combar">
+        <div class="suggest" id="suggest"></div>
+        <div class="inputrow">
+          <span class="prompt">visitor@dr5hn:~$</span>
+          <span class="cmd-field">
+            <span class="ghost" id="ghost" aria-hidden="true"></span>
+            <input id="cmdline" autocomplete="off" autocapitalize="off" autocorrect="off"
+                   spellcheck="false" aria-label="terminal command input"
+                   placeholder="type a command — or tap one above" />
+          </span>
+        </div>
+      </div>
+
+      <!-- CRT overlays -->
+      <div class="scanlines"></div>
+      <div class="vignette"></div>
+      <div class="flicker"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="ask.js"></script>
+  <script src="sfx.js"></script>
+  <script src="snake.js"></script>
+  <script src="engine.js"></script>
+</body>
+</html>

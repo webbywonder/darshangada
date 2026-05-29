@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+*.swp
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Claude Code session state
+.remember/
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Environment & secrets
+.env
+.env.*
+
+# Dependencies / build output (in case a toolchain is added later)
+node_modules/
+dist/
+build/
